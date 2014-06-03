@@ -300,7 +300,7 @@ cookies = facebook_login(username,password)
 
 
 if args.query:
-	graph_search(graph_search_query)
+	graph_search(graph_search_query.decode('utf8'))
 	results = extract_profiles()
 	results = check_if_public(results,cookies)
 	save_file(filename,results)
